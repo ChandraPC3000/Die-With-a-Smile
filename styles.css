@@ -1,0 +1,442 @@
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe4e1;
+    /* Warna pink lembut */
+    color: #800000;
+    /* Merah gelap untuk teks */
+    margin: 0;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    /* Agar animasi tidak keluar viewport */
+}
+
+
+/* Animasi Love, Bunga, dan Ikon Lainnya */
+
+body::before,
+body::after {
+    position: absolute;
+    font-size: 3em;
+    opacity: 0.7;
+    z-index: 999;
+    pointer-events: none;
+    animation: float 4s infinite ease-in-out;
+}
+
+
+/* Tambahkan animasi love */
+
+body::before {
+    content: "❤️🥰😍💘💝";
+    top: 10%;
+    left: 1%;
+    animation-delay: 1s;
+}
+
+
+/* Tambahkan animasi bunga */
+
+body::after {
+    content: "🌸🫶🤍🩷";
+    top: 10%;
+    right: 1%;
+    animation-delay: 1s;
+}
+
+
+/* Animasi mengambang */
+
+
+/* Animasi Mawar dan Partikel Cinta */
+
+.animation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.rose-petal,
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    animation: float 10s infinite ease-in-out;
+}
+
+.rose-petal {
+    background-color: pink;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+.sparkle {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+/* Random Positioning */
+
+.rose-petal:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.rose-petal:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.rose-petal:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.sparkle:nth-child(1) {
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.sparkle:nth-child(2) {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.sparkle:nth-child(3) {
+    left: 60%;
+    animation-delay: 5s;
+}
+
+
+/* Glowing Lights */
+
+.glowing-lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.glowing-lights div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 192, 203, 1) 0%, rgba(255, 105, 180, 0) 70%);
+    border-radius: 50%;
+    animation: glow 6s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.glowing-lights div:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.glowing-lights div:nth-child(2) {
+    top: 30%;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.glowing-lights div:nth-child(3) {
+    top: 50%;
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.glowing-lights div:nth-child(4) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+/* Falling Petals */
+
+.falling-petals {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.falling-petals div {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: fall 8s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+.falling-petals div:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.falling-petals div:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.falling-petals div:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.falling-petals div:nth-child(4) {
+    left: 75%;
+    animation-delay: 6s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+
+/* Pulsing Circles */
+
+.pulsing-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pulsing-circles div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid pink;
+    border-radius: 50%;
+    animation: pulse 3s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+.pulsing-circles div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.pulsing-circles div:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 1.5s;
+}
+
+.pulsing-circles div:nth-child(3) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* Wrapper untuk konten utama */
+
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Kontainer Utama */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+
+/* Bagian Kiri: Gambar & Player Audio */
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.left-container #img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2vh;
+    margin-bottom: 1.5vh;
+}
+
+.left-container #img img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+    /* Bayangan pink */
+}
+
+.player {
+    text-align: center;
+    background-color: #ffc0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+audio {
+    width: 100%;
+}
+
+
+/* Bagian Kanan: Lirik */
+
+.right-container {
+    width: 50%;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.lyrics-container {
+    width: 100%;
+    background: linear-gradient(135deg, #ff9aa2, #ffb7b2, #ffccd5);
+    /* Gradien romantis */
+    line-height: 50px;
+    border-radius: 10px;
+    height: 80vh;
+    overflow: scroll;
+    font-size: 1.2em;
+    color: #8b0000;
+    /* Warna merah tua */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lyric {
+    transition: all 0.3s ease;
+}
+
+.lyric.active {
+    color: #ff69b4;
+    /* Hot pink untuk lirik aktif */
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000000;
+    /* Sedikit bayangan hitam */
+}
+
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        gap: 2vh;
+    }
+    .left-container,
+    .right-container {
+        width: 100%;
+        text-align: center;
+    }
+    .player {
+        width: 80%;
+        background-color: #ffccd5;
+    }
+    .lyrics-container {
+        width: 100%;
+        font-size: 1em;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        gap: 2vh;
+    }
+    .left-container #img {
+        width: 70%;
+    }
+    .player {
+        width: 85%;
+    }
+    .lyrics-container {
+        font-size: 0.9em;
+        height: 30vh;
+    }
+}
